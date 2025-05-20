@@ -1,0 +1,70 @@
+html,
+body {
+  font-optical-sizing: auto;
+  font-family: var(--ff1);
+  background-color: var(--cl);
+  color: var(--cm);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.overhide {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+.main {
+  z-index: 1;
+  flex: 1 1 auto;
+  padding-bottom: 5.3125rem;
+}
+
+[class*="__container"] {
+  max-width: 80rem;
+  padding: 0 2.5em;
+  margin: 0 auto;
+  &.wide {
+    max-width: 95rem;
+  }
+}
+
+/* --------- Adaptive desktop (1520px) --------- */
+
+@media screen and (max-width: 1520px) {
+  html,
+  body {
+    font-size: 1.0526vw;
+  }
+}
+
+/* --------- Adaptive tablet (960px) --------- */
+
+@media screen and (max-width: 960px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  [class*="__container"] {
+    padding: 0 0.9375em;
+  }
+
+  .main {
+    padding-bottom: 3.125rem;
+  }
+}
+
+/* --------- Adaptive mobile (320px) --------- */
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 5vw;
+  }
+}

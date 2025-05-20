@@ -1,0 +1,34 @@
+.modal {
+  .modal__body {
+    max-width: 46.875rem;
+  }
+}
+
+.ceoinf__tl {
+  font-family: var(--ff2);
+  font-size: 4.125rem;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-bottom: 1.5625rem;
+}
+
+.ceoinf__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem 0;
+}
+
+@media screen and (max-width: 960px) {
+  .modal {
+    .modal__body {
+      max-width: 27.5rem;
+    }
+  }
+
+  .ceoinf__tl {
+    font-size: 2.375rem;
+    line-height: 1;
+    margin-bottom: 0.9375rem;
+    padding-right: 1.875rem;
+  }
+}

@@ -1,0 +1,320 @@
+.join {
+  position: relative;
+  z-index: 4;
+  padding: 11.1875rem 0 7rem 0;
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    width: 24.75rem;
+    .tl2 {
+      margin-bottom: 2rem;
+    }
+  }
+  &__txt {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    margin-bottom: 2rem;
+  }
+
+  &__fltr1 {
+    position: absolute;
+    z-index: 1;
+    top: -22.3125rem;
+    left: 0.5rem;
+    width: 80.5625rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__slice1 {
+    position: absolute;
+    z-index: 2;
+    right: -9.4375rem;
+    bottom: 0;
+    width: 55.5212rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__slice2 {
+    position: absolute;
+    z-index: 2;
+    right: -3.5625rem;
+    bottom: 0;
+    width: 43.68881rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    z-index: 5;
+    right: 9.625rem;
+    bottom: 2.5625rem;
+    width: 18.29275rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: calc(100% + 15rem);
+    height: 100%;
+    overflow: hidden;
+  }
+  &__gallery1,
+  &__gallery2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    transform: translateY(50%);
+    ul {
+      li {
+        width: 4.125rem;
+        height: 4.125rem;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 0.1875rem solid var(--cw);
+      }
+    }
+  }
+  &__gallery1 {
+    right: calc(15rem - 9.4375rem - 2.0625rem);
+    width: calc(55.5212rem + 4.125rem);
+    height: calc(55.5212rem + 4.125rem);
+    animation: rotateGallery1eBig 20s linear infinite;
+
+    li {
+      position: absolute;
+      animation: liRotateGallery1e1Big 20s linear infinite;
+      &:nth-child(1) {
+        top: 46.4%;
+        left: 0;
+      }
+      &:nth-child(2) {
+        top: 20%;
+        left: 8%;
+      }
+      &:nth-child(3) {
+        top: 3%;
+        left: 31%;
+      }
+      &:nth-child(4) {
+        top: 3%;
+        right: 31%;
+      }
+      &:nth-child(5) {
+        top: 20%;
+        right: 8%;
+      }
+      &:nth-child(6) {
+        top: 46.4%;
+        right: 0;
+      }
+      &:nth-child(7) {
+        bottom: 20%;
+        right: 8%;
+      }
+      &:nth-child(8) {
+        bottom: 3%;
+        right: 31%;
+      }
+      &:nth-child(9) {
+        bottom: 3%;
+        left: 31%;
+      }
+      &:nth-child(10) {
+        bottom: 20%;
+        left: 8%;
+      }
+    }
+  }
+  &__gallery2 {
+    right: calc(15rem - 3.5625rem - 2.0625rem);
+    width: calc(43.68881rem + 4.125rem);
+    height: calc(43.68881rem + 4.125rem);
+    animation: rotateGallery1eSmall 20s linear infinite;
+
+    li {
+      position: absolute;
+      animation: liRotateGallery1e1Small 20s linear infinite;
+      &:nth-child(1) {
+        top: 46.4%;
+        left: 0;
+      }
+      &:nth-child(2) {
+        top: 20%;
+        left: 8%;
+      }
+      &:nth-child(3) {
+        top: 3%;
+        left: 31%;
+      }
+      &:nth-child(4) {
+        top: 3%;
+        right: 31%;
+      }
+      &:nth-child(5) {
+        top: 20%;
+        right: 8%;
+      }
+      &:nth-child(6) {
+        top: 46.4%;
+        right: 0;
+      }
+      &:nth-child(7) {
+        bottom: 20%;
+        right: 8%;
+      }
+      &:nth-child(8) {
+        bottom: 3%;
+        right: 31%;
+      }
+      &:nth-child(9) {
+        bottom: 3%;
+        left: 31%;
+      }
+      &:nth-child(10) {
+        bottom: 20%;
+        left: 8%;
+      }
+    }
+  }
+}
+
+@keyframes rotateGallery1eBig {
+  from {
+    transform: translateY(50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(50%) rotate(360deg);
+  }
+}
+@keyframes liRotateGallery1e1Big {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateGallery1eSmall {
+  from {
+    transform: translateY(50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(50%) rotate(-360deg);
+  }
+}
+@keyframes liRotateGallery1e1Small {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .join {
+    padding: 2.5rem 0 13.6875rem 0;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .tl2 {
+        text-align: center;
+        margin-bottom: 0.8125rem;
+      }
+    }
+    &__txt {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.1875rem;
+    }
+
+    &__fltr1 {
+      top: -2.1875rem;
+      left: 50%;
+      transform: translateX(-55%);
+      width: 32.9375rem;
+    }
+
+    &__slice1 {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: 21.5625rem;
+    }
+    &__slice2 {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: 16.9375rem;
+    }
+
+    &__logo {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      bottom: 0.9906rem;
+      width: 7.09806rem;
+    }
+
+    &__box {
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% + 1.875rem);
+      border-radius: 0.9375rem;
+    }
+    &__gallery1,
+    &__gallery2 {
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      ul {
+        li {
+          width: 1.6875rem;
+          height: 1.6875rem;
+          border: 0.0625rem solid var(--cw);
+        }
+      }
+    }
+    &__gallery1 {
+      right: auto;
+      width: calc(21.5625rem + 1.6875rem);
+      height: calc(21.5625rem + 1.6875rem);
+    }
+    &__gallery2 {
+      right: auto;
+      width: calc(16.9375rem + 1.6875rem);
+      height: calc(16.9375rem + 1.6875rem);
+    }
+  }
+
+  @keyframes rotateGallery1eBig {
+    from {
+      transform: translateY(50%) translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateY(50%) translateX(-50%) rotate(360deg);
+    }
+  }
+  @keyframes rotateGallery1eSmall {
+    from {
+      transform: translateY(50%) translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateY(50%) translateX(-50%) rotate(-360deg);
+    }
+  }
+}

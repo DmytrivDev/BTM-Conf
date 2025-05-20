@@ -1,0 +1,44 @@
+.registr {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem 0;
+
+    .tl3 {
+      padding-right: 1rem;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5625rem;
+    .btn-def {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .registr {
+    &__form {
+      gap: 1rem 0;
+
+      .tl3 {
+        padding-right: 2rem;
+      }
+    }
+
+    .form {
+      gap: 1rem 0;
+    }
+
+    &__btns {
+      flex-direction: column;
+      justify-content: stretch;
+      gap: 1rem;
+      .btn-def {
+        width: 100%;
+      }
+    }
+  }
+}

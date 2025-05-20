@@ -1,0 +1,134 @@
+.receive {
+  padding: 28rem 0 12.1875rem 0;
+  background-color: var(--co);
+  border-radius: 4.375rem;
+
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    position: relative;
+    z-index: 5;
+    border-radius: 4.375rem;
+    border: 0.0625rem solid var(--cw2);
+    background-color: rgba(253, 180, 129, 0.6);
+    box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
+    padding: 6.4375rem 7.5rem;
+    display: grid;
+    grid-template-columns: 27.9375rem 1fr;
+    align-items: start;
+    gap: 0 6.875rem;
+
+    .btn-def {
+      &.btn-mob {
+        display: none;
+      }
+    }
+  }
+
+  &__heading {
+    position: sticky;
+    top: 13.3125rem;
+    .tl2 {
+      margin-bottom: 2.875rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.8125rem 4.8125rem;
+    li {
+      width: 100%;
+      max-width: calc((100% - 1 * 4.8125rem) / 2);
+      & > span {
+        display: block;
+        width: 2.75rem;
+        margin-bottom: 1.25rem;
+        img {
+          width: 100%;
+        }
+      }
+      .tl4 {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  &__fltr {
+    position: absolute;
+    top: 8.6875rem;
+    left: 1.5625rem;
+    width: 88.3125rem;
+    transform: rotate(30deg);
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .receive {
+    padding: 23rem 0 4.9375rem 0;
+    border-radius: 0.9375rem;
+
+    &__container {
+      padding: 0;
+    }
+
+    &__body {
+      border-radius: 0.9375rem;
+      padding: 3.125rem 0.9375rem 1.875rem 0.9375rem;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 1.875rem 0;
+
+      .btn-def {
+        display: none;
+        &.btn-mob {
+          display: flex;
+        }
+      }
+    }
+
+    &__heading {
+      position: static;
+      top: 0;
+      .tl2 {
+        margin-bottom: 0;
+      }
+    }
+
+    &__list {
+      gap: 1.875rem;
+      li {
+        max-width: calc((100% - 1 * 1.875rem) / 2);
+        & > span {
+          width: 1.875rem;
+          margin-bottom: 0.625rem;
+        }
+        .tl4 {
+          margin-bottom: 0.625rem;
+        }
+      }
+    }
+
+    &__fltr {
+      top: 3.6194rem;
+      left: -4.6319rem;
+      width: 33.6512rem;
+      filter: blur(2.7849rem);
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .receive {
+    &__list {
+      li {
+        max-width: 100%;
+      }
+    }
+  }
+}

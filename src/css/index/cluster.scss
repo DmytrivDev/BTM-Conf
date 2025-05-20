@@ -1,0 +1,134 @@
+.arrows {
+  &__body {
+    display: flex;
+    gap: 0 1.0625rem;
+  }
+
+  &__next,
+  &__prev {
+    border: 0.0625rem solid var(--cy);
+    border-radius: 50%;
+    padding: 1.25rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in;
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: 1.5rem 1.5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: var(--arrSlideRightY);
+      transition: all 0.15s ease-in;
+    }
+    &:hover {
+      background-color: var(--cy);
+      &::before {
+        background-image: var(--arrSlideRightB);
+      }
+    }
+    &.isDisabled {
+      cursor: no-drop;
+      opacity: 0.7;
+      &:hover {
+        background-color: transparent;
+        &::before {
+          background-image: var(--arrSlideRightY);
+        }
+      }
+    }
+  }
+
+  &__prev {
+    &::before {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem 0;
+
+  &.cl-gray {
+    .label__def {
+      input,
+      textarea {
+        border-color: var(--cd);
+        color: var(--cm);
+        &::placeholder {
+          color: var(--cd2);
+        }
+      }
+    }
+  }
+
+  .label__def {
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.7813rem 0.6875rem;
+      border: 0.0625rem solid var(--cw);
+      border-radius: 0.375rem;
+      background-color: transparent;
+
+      font-size: 0.9375rem;
+      line-height: 1.4;
+      color: var(--cw);
+      transition: all 0.15s ease-in;
+      &::placeholder {
+        color: var(--cw);
+      }
+      &:hover,
+      &:focus {
+        border-color: var(--cy);
+      }
+    }
+    textarea {
+      padding: 0.9375rem;
+    }
+    &.isRequire {
+      input {
+        border-color: var(--co);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .arrows {
+    width: 100%;
+    &__body {
+      justify-content: space-between;
+    }
+
+    &__next,
+    &__prev {
+      background-color: var(--cy);
+      border-radius: 0.9375rem;
+      padding: 0.75rem;
+      &::before {
+        width: 1rem;
+        height: 1rem;
+        background-size: 1rem 1rem;
+        background-image: var(--arrSlideRightB);
+      }
+      &.isDisabled {
+        &:hover {
+          background-color: var(--cy);
+          &::before {
+            background-image: var(--arrSlideRightB);
+          }
+        }
+      }
+    }
+  }
+
+  .form {
+    gap: 1rem 0;
+  }
+}

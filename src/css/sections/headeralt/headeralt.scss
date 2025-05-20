@@ -1,0 +1,53 @@
+.headeralt {
+  &.header {
+    .header__body {
+      .custom-logo-link {
+        width: 5.5781rem;
+        margin-right: auto;
+      }
+    }
+
+    .navmenu {
+      gap: 0;
+      &__nav {
+        margin-right: 12.9375rem;
+      }
+
+      .btn-def {
+        &.alt {
+          padding: 0.7813rem 2rem;
+          background-color: var(--cy);
+          color: var(--cm);
+          &:hover {
+            background-color: var(--cm);
+            color: var(--cy);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .headeralt {
+    &.header {
+      .header__body {
+        .custom-logo-link {
+          width: 4.024rem;
+        }
+      }
+      .navmenu {
+        gap: 1.5625rem 0;
+        &__nav {
+          margin-right: 0;
+        }
+
+        .btn-def {
+          &.alt {
+            padding: 0.875rem 1.875rem;
+          }
+        }
+      }
+    }
+  }
+}

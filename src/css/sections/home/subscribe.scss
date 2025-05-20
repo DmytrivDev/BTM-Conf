@@ -1,0 +1,228 @@
+.subscribe {
+  padding-top: 11.6875rem;
+
+  &__wrapp {
+    border-radius: 4.375rem;
+    background-color: var(--co);
+  }
+  &__body {
+    position: relative;
+    padding-top: 9.375rem;
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 5;
+    margin-bottom: -4.1875rem;
+  }
+  &__subtl {
+    font-family: var(--ff2);
+    font-weight: 400;
+    font-size: 5.625rem;
+    line-height: 0.87778;
+    color: var(--cw);
+    margin-bottom: -0.625rem;
+  }
+  &__tl {
+    font-family: var(--ff3);
+    font-weight: 600;
+    font-size: 14.75rem;
+    line-height: 0.8261;
+    color: var(--cg);
+  }
+
+  &__fltr1 {
+    position: absolute;
+    z-index: -1;
+    top: -52.375rem;
+    right: 0.5938rem;
+    transform: rotate(-135deg);
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+  &__fltr2 {
+    position: absolute;
+    z-index: 1;
+    top: -5rem;
+    left: -20.125rem;
+    width: 42.625rem;
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+  &__fltr3 {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    div {
+      position: absolute;
+      &:nth-child(1) {
+        z-index: 3;
+        left: 18.1875rem;
+        bottom: -41.3125rem;
+        width: 45.97313rem;
+        height: 47.38381rem;
+        border-radius: 47.38381rem;
+        background-color: rgba(112, 229, 159, 0.9);
+        filter: blur(12.4476rem);
+      }
+      &:nth-child(2) {
+        z-index: 2;
+        left: 4.8125rem;
+        bottom: -20.6875rem;
+        width: 42.93481rem;
+        height: 34.01325rem;
+        border-radius: 42.93481rem;
+        background-color: rgba(162, 238, 38, 0.7);
+        filter: blur(8.7133rem);
+      }
+      &:nth-child(3) {
+        z-index: 1;
+        left: 4.8125rem;
+        bottom: -0.9063rem;
+        width: 45.01875rem;
+        height: 42.73675rem;
+        border-radius: 45.01875rem;
+        background-color: #31bacd;
+        filter: blur(8.7133rem);
+        transform: translateY(100%);
+      }
+    }
+  }
+  &__fltr4 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: -16rem;
+    transform: translateY(50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 68.625rem;
+    img {
+      position: relative;
+      z-index: 2;
+      opacity: 0.3;
+      width: 100%;
+    }
+  }
+
+  &__slice1 {
+    position: absolute;
+    z-index: 2;
+    right: -9.4375rem;
+    bottom: 0;
+    width: 55.5212rem;
+    transform: translateY(100%);
+    img {
+      width: 100%;
+    }
+  }
+  &__slice2 {
+    position: absolute;
+    z-index: 2;
+    right: -3.5625rem;
+    bottom: 0;
+    width: 43.68881rem;
+    transform: translateY(100%);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .subscribe {
+    padding-top: 2.375rem;
+
+    &__wrapp {
+      border-radius: 0.9375rem;
+    }
+    &__body {
+      padding-top: 2.75rem;
+    }
+
+    &__heading {
+      margin-bottom: -1.5rem;
+    }
+    &__subtl {
+      font-size: 2rem;
+      line-height: 1.0625;
+      margin-bottom: 0;
+    }
+    &__tl {
+      font-size: 2.875rem;
+      line-height: normal;
+    }
+
+    &__fltr1 {
+      right: -56.0944rem;
+    }
+    &__fltr2 {
+      display: none;
+    }
+    &__fltr3 {
+      div {
+        &:nth-child(1) {
+          left: calc(50% - 2.9094rem);
+          bottom: -13.125rem;
+          transform: translateX(-50%);
+          width: 16.59869rem;
+          height: 17.10806rem;
+          border-radius: 17.10806rem;
+          filter: blur(4.4942rem);
+        }
+        &:nth-child(2) {
+          left: calc(50% - 7.75rem);
+          bottom: -5.625rem;
+          transform: translateX(-50%);
+          width: 15.50175rem;
+          height: 12.28056rem;
+          filter: blur(3.146rem);
+        }
+        &:nth-child(3) {
+          left: calc(50% - 7.75rem);
+          bottom: -13.9063rem;
+          width: 16.25413rem;
+          height: 15.43019rem;
+          border-radius: 16.25413rem;
+          filter: blur(3.146rem);
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+    }
+    &__fltr4 {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+
+      width: 26.625rem;
+    }
+
+    &__slice1 {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%) translateY(100%);
+      width: 21.5625rem;
+    }
+    &__slice2 {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%) translateY(100%);
+      width: 16.9375rem;
+    }
+  }
+}

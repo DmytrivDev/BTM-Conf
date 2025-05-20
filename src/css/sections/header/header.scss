@@ -1,0 +1,135 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+
+  &.isScroll {
+    .header__main {
+      background-color: var(--cl);
+      border-color: var(--cl3);
+    }
+  }
+  &__main {
+    position: relative;
+    z-index: 110;
+    background-color: transparent;
+    border-bottom: 0.0625rem solid transparent;
+    padding: 1.875rem 0;
+
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 0 1.125rem;
+    .custom-logo-link {
+      width: 5.3281rem;
+      img {
+        width: 100%;
+      }
+    }
+    .eic-logo {
+      width: 14rem;
+      margin-right: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    &__main {
+      padding: 0.625rem 0;
+    }
+    &__body {
+      gap: 0 0.8125rem;
+      .custom-logo-link {
+        width: 4.024rem;
+      }
+      .eic-logo {
+        width: 10.09894rem;
+      }
+    }
+  }
+
+  .burger {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5444rem 0;
+
+    & > span {
+      font-weight: 700;
+      font-size: 0.625rem;
+      line-height: 1.2;
+      color: var(--cw);
+    }
+
+    & > div {
+      position: relative;
+      width: 16px;
+      height: 16px;
+
+      span {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 0.125rem;
+        border: 2px solid var(--cy);
+        background-color: transparent;
+
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 0;
+          right: 0;
+        }
+        &:nth-child(3) {
+          left: 0;
+          bottom: 0;
+        }
+        &:nth-child(4) {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &.isOpened {
+      & > div {
+        span {
+          left: 50%;
+          top: 50%;
+          width: 100%;
+          height: 2px;
+          border: 0 solid var(--cy);
+          background-color: var(--cy);
+
+          -webkit-transition: all 0.2s ease-in;
+          -o-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+
+          &:nth-child(1),
+          &:nth-child(4) {
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}

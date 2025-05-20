@@ -1,0 +1,110 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgba(34, 34, 34, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  -webkit-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+
+  &.isOpened {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    .modal__body {
+      transform: scale(1);
+    }
+  }
+
+  &__container {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    flex: 0 0 auto;
+    margin: 5rem 0;
+    position: relative;
+    background-color: var(--cw);
+    border-radius: 1rem;
+    max-width: 37.5rem;
+    width: 100%;
+    padding: 3.125rem;
+    transform: scale(0.9);
+
+    -webkit-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2.125rem;
+    right: 2.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in;
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      background-size: 1rem 1rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: var(--modalCloseBlack);
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .modal {
+    &__body {
+      max-width: 27.5rem;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+    }
+
+    &__close {
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .modal {
+    &__container {
+      padding: 0;
+    }
+
+    &__body {
+      max-width: 20rem;
+    }
+  }
+}

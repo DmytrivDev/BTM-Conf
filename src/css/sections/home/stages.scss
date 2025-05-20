@@ -1,0 +1,63 @@
+.stages {
+  position: relative;
+  z-index: 4;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.75rem;
+    li {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1.9375rem 0;
+      max-width: calc((100% - 2 * 3.75rem) / 3);
+    }
+  }
+
+  &__img {
+    width: 9.5rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__txt {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
+
+  &__vec {
+    position: absolute;
+    top: 4.8125rem;
+    right: -2rem;
+    width: 13.97525rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stages {
+    &__list {
+      gap: 2.5rem;
+      li {
+        gap: 0.625rem 0;
+        max-width: 100%;
+      }
+    }
+
+    &__img {
+      width: 4.375rem;
+    }
+    &__txt {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    &__vec {
+      display: none;
+    }
+  }
+}

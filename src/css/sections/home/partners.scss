@@ -1,0 +1,43 @@
+.partners {
+  position: relative;
+  z-index: 5;
+  padding-top: 6.5625rem;
+
+  &__heading {
+    margin-bottom: 3.9375rem;
+  }
+  &__tl {
+    max-width: 58.4375rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 12.375rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .partners {
+    padding-top: 2.4375rem;
+
+    &__heading {
+      margin-bottom: 2.25rem;
+    }
+    &__tl {
+      max-width: 18.125rem;
+    }
+
+    &__box {
+      height: 4.8125rem;
+      max-width: 7.9375rem;
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+}
