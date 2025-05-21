@@ -1,6 +1,11 @@
 .footer {
-  z-index: 5;
+  padding-top: 5.3125rem;
+  background-color: var(--cl);
 
+  &__container {
+    position: relative;
+    z-index: 5;
+  }
   &__top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -219,6 +224,8 @@
 
 @media screen and (max-width: 960px) {
   .footer {
+    padding-top: 3.125rem;
+
     &__top {
       grid-template-columns: 1fr;
       grid-template-rows: auto;

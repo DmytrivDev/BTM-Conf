@@ -2,7 +2,7 @@ html,
 body {
   font-optical-sizing: auto;
   font-family: var(--ff1);
-  background-color: var(--cl);
+  background-color: var(--cu2);
   color: var(--cm);
   font-size: 1rem;
   line-height: 1.5;
@@ -23,7 +23,6 @@ body {
 .main {
   z-index: 1;
   flex: 1 1 auto;
-  padding-bottom: 5.3125rem;
 }
 
 [class*="__container"] {
@@ -54,10 +53,6 @@ body {
 
   [class*="__container"] {
     padding: 0 0.9375em;
-  }
-
-  .main {
-    padding-bottom: 3.125rem;
   }
 }
 

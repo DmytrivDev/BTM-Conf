@@ -1,0 +1,138 @@
+.useful {
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    padding: 9.375rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 5.1875rem;
+  }
+  &__tl {
+    font-family: var(--ff3);
+    font-size: 6.875rem;
+    font-weight: 600;
+    line-height: 0.9;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.125rem 1.875rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: calc((100% - 3 * 1.875rem) / 4);
+
+      & > span {
+        flex-shrink: 0;
+        width: 3.75rem;
+        img {
+          width: 100%;
+        }
+      }
+      h2,
+      h3,
+      h4 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.29;
+      }
+    }
+  }
+
+  &__corner {
+    position: absolute;
+    z-index: -1;
+    top: -18.14rem;
+    left: -11.3125rem;
+    transform: rotate(30deg);
+    width: 73.3425rem;
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    z-index: -2;
+    top: -10.6875rem;
+    left: 0.1875rem;
+    width: 28.1875rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .useful {
+    br {
+      display: none;
+    }
+    &__body {
+      padding: 3.5rem 0;
+    }
+
+    &__heading {
+      margin-bottom: 1.875rem;
+    }
+    &__tl {
+      font-family: var(--ff3);
+      font-size: 2.8125rem;
+      line-height: 1.11;
+    }
+    &__list {
+      gap: 1.25rem;
+      li {
+        max-width: calc((100% - 2 * 1.25rem) / 3);
+
+        & > span {
+          width: 2.5rem;
+        }
+        h2,
+        h3,
+        h4 {
+          font-size: 1.125rem;
+          line-height: 1.44;
+        }
+      }
+    }
+
+    &__corner {
+      top: -4.1875rem;
+      left: -1.625rem;
+      width: 14.6412rem;
+      filter: blur(2.0209rem);
+    }
+
+    &__circle {
+      top: -2.6875rem;
+      left: -0.2813rem;
+      width: 5.6375rem;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .useful {
+    &__list {
+      li {
+        max-width: calc((100% - 1 * 1.25rem) / 2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .useful {
+    &__list {
+      li {
+        max-width: 100%;
+      }
+    }
+  }
+}
