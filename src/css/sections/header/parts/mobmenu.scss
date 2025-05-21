@@ -4,15 +4,16 @@
 
 @media screen and (max-width: 960px) {
   .mobmenu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 100;
     width: 100%;
-    height: calc(100vh - 100%);
-    background-color: var(--cl);
+    height: calc(var(--vh, 1vh) * 100 - 100%);
+    background-color: var(--cu);
     transform: translateX(100%);
 
     transition: all 0.2s ease-in;
@@ -25,7 +26,7 @@
       position: absolute;
       top: -100%;
       left: 0;
-      background-color: var(--cl);
+      background-color: var(--cu);
       width: 100%;
       height: 100%;
     }
@@ -35,13 +36,18 @@
     }
 
     &__body {
-      overflow-y: auto;
-      height: 100%;
-    }
-    &__container {
-      height: 100%;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
+    }
+    &__container {
+      width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.9375rem;
+      padding-bottom: 2rem;
     }
   }
 }

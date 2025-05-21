@@ -1,6 +1,6 @@
-.contacts {
+.connect {
   position: relative;
-  padding-top: 2.5rem;
+  padding-top: 6.625rem;
 
   &__heading {
     margin-bottom: -2.6875rem;
@@ -12,10 +12,7 @@
   &__body {
     position: relative;
     z-index: 10;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 9.6875rem;
-    padding: 7.8125rem 7.5rem 4.5rem 7.5rem;
+    padding: 7.8125rem 7.5rem;
     border-radius: 4.375rem;
     border: 0.0625rem solid var(--cw2);
     background-color: rgba(0, 200, 163, 0.1);
@@ -33,20 +30,65 @@
     }
   }
 
-  &__address {
+  &__content {
     position: relative;
     z-index: 5;
     .tl3 {
-      margin-bottom: 2rem;
+      line-height: 1.08696;
+      margin-bottom: 1.625rem;
     }
   }
+  &__address {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 3.125rem;
+    & > div {
+      flex: 0 0 auto;
+    }
+  }
+  &__logo {
+    & > p {
+      color: var(--cw);
+      margin-bottom: 0.875rem;
+    }
+    & > a {
+      display: block;
+      width: 5.5781rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__box {
+    & > p {
+      color: var(--cw);
+      margin-bottom: 0.875rem;
+    }
+    & > a {
+      display: flex;
+      align-items: start;
+      gap: 0 0.8125rem;
 
-  &__form {
-    position: relative;
-    z-index: 5;
-    padding-right: 6.25rem;
-    .tl3 {
-      margin-bottom: 1.5625rem;
+      width: fit-content;
+      word-break: break-word;
+      font-size: 2rem;
+      line-height: 1.28125;
+      color: var(--cw);
+      transition: all 0.15s ease-in;
+
+      & > span {
+        position: relative;
+        top: 0.5rem;
+        flex-shrink: 0;
+        width: 1.5625rem;
+        img {
+          width: 100%;
+        }
+      }
+      &:hover {
+        color: var(--cy);
+      }
     }
   }
 
@@ -117,54 +159,19 @@
   }
 }
 
-.address {
-  &__box {
-    & > p {
-      color: var(--cw);
-      margin-bottom: 0.5rem;
-    }
-    & > a {
-      display: flex;
-      align-items: start;
-      gap: 0 0.8125rem;
-
-      width: fit-content;
-      font-size: 2.5rem;
-      line-height: 1.275;
-      color: var(--cw);
-      transition: all 0.15s ease-in;
-
-      & > span {
-        position: relative;
-        top: 0.9375rem;
-        flex-shrink: 0;
-        width: 1.5625rem;
-        img {
-          width: 100%;
-        }
-      }
-      &:hover {
-        color: var(--cy);
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 960px) {
-  .contacts {
-    padding-top: 3.125rem;
+  .connect {
+    padding-top: 3rem;
 
     &__container {
       padding: 0;
     }
 
     &__heading {
-      margin-bottom: -1.75rem;
+      margin-bottom: -1.375rem;
     }
 
     &__body {
-      grid-template-columns: 1fr;
-      gap: 1.5625rem 0;
       padding: 1.0625rem 0.9375rem 2.6875rem 0.9375rem;
       border-radius: 0.9375rem;
 
@@ -173,21 +180,37 @@
       }
     }
 
-    &__address {
+    &__content {
       .tl3 {
+        line-height: 1.10714;
         margin-bottom: 0.75rem;
       }
     }
-
-    &__form {
-      padding-right: 0;
-      .tl3 {
-        margin-bottom: 1rem;
+    &__logo {
+      & > p {
+        font-size: 0.875rem;
+        margin-bottom: 0.625rem;
       }
+      & > a {
+        width: 4.875rem;
+      }
+    }
+    &__box {
+      & > p {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+      }
+      & > a {
+        font-size: 1.125rem;
+        line-height: 1.44444;
 
-      .btn-def {
-        padding: 1.0938rem 2.4375rem;
-        border-radius: 1.25rem;
+        & > span {
+          top: 0.25rem;
+          width: 1.125rem;
+        }
+        &:hover {
+          color: var(--cw);
+        }
       }
     }
 
@@ -236,26 +259,15 @@
       }
     }
   }
+}
 
-  .address {
-    &__box {
-      & > p {
-        font-size: 0.875rem;
-        margin-bottom: 0.25rem;
-      }
-      & > a {
-        font-size: 1.125rem;
-        align-items: center;
-        line-height: 1.44444;
-
-        & > span {
-          top: 0;
-          width: 1.125rem;
-        }
-        &:hover {
-          color: var(--cw);
-        }
-      }
+@media screen and (max-width: 675px) {
+  .connect {
+    &__address {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 0.75rem;
     }
   }
 }

@@ -1,20 +1,18 @@
-.header__main {
+.header__body {
   .navmenu {
-    display: flex;
-    gap: 0 3rem;
-    align-items: center;
+    flex: 0 1 auto;
 
     &__list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.9375rem 1.875rem;
+      gap: 0.875rem 1.875rem;
       & > li,
       .menu-item {
         overflow: hidden;
         padding: 0.35rem 0;
         &.current-menu-item {
           & > a {
-            color: var(--cy);
+            color: var(--cl);
             &::after,
             &::before {
               opacity: 1;
@@ -26,10 +24,9 @@
           font-weight: 700;
           font-size: 0.75rem;
           line-height: 1.41667;
-          color: var(--cw);
           transition: all 0.15s ease-in;
           &:hover {
-            color: var(--cy);
+            color: var(--cl);
             &::after,
             &::before {
               opacity: 1;
@@ -44,43 +41,10 @@
             transform: translateX(-50%) translateY(15%) rotate(-1deg);
             width: calc(100% + 2rem);
             height: 100%;
-            border: 0.0625rem solid var(--cy);
+            border: 0.0625rem solid var(--cl);
             border-radius: 50%;
             opacity: 0;
             transition: all 0.15s ease-in;
-          }
-        }
-      }
-    }
-
-    &__box {
-      display: flex;
-      align-items: center;
-      gap: 0 1.75rem;
-    }
-    &__lang {
-      & > li {
-        .sub-menu {
-          display: flex;
-          gap: 0 0.8125rem;
-          & > li {
-            &.current-lang {
-              & > a {
-                opacity: 1;
-              }
-            }
-            & > a {
-              display: block;
-              font-weight: 700;
-              font-size: 0.8125rem;
-              text-transform: uppercase;
-              color: var(--cw);
-              opacity: 0.3;
-              transition: all 0.15s ease-in;
-              &:hover {
-                opacity: 1;
-              }
-            }
           }
         }
       }
@@ -89,7 +53,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .header__main {
+  .header__body {
     .navmenu {
       display: none;
     }
@@ -97,11 +61,11 @@
 
   .mobmenu {
     .navmenu {
-      padding: 0.9194rem 0 6rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 1.5625rem 0;
+      margin-bottom: 4rem;
 
       &__list {
         display: flex;
@@ -112,44 +76,14 @@
         .menu-item {
           &.current-menu-item {
             & > a {
-              color: var(--cy);
+              color: var(--cl);
             }
           }
           a {
+            display: block;
             font-weight: 700;
-            color: var(--cw);
             text-align: center;
             transition: all 0.15s ease-in;
-          }
-        }
-      }
-
-      &__box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5625rem 0;
-      }
-
-      &__lang {
-        & > li {
-          .sub-menu {
-            display: flex;
-            gap: 0 1.25rem;
-            & > li {
-              &.current-lang {
-                & > a {
-                  opacity: 1;
-                }
-              }
-              & > a {
-                display: block;
-                font-weight: 700;
-                color: var(--cw);
-                opacity: 0.3;
-                transition: all 0.15s ease-in;
-              }
-            }
           }
         }
       }

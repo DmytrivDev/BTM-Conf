@@ -41,50 +41,49 @@
 
 .btn-def {
   flex-shrink: 0;
+  width: fit-content;
   display: block;
   text-align: center;
   border-radius: 1.25rem;
   padding: 1.4375rem 2.4375rem;
-  background-color: var(--cy);
-  border: 0.0625rem solid transparent;
+  color: var(--cw);
+  background-color: var(--cl);
+  border: 0.0625rem solid var(--cl);
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.35714;
-  width: fit-content;
   transition: all 0.15s ease-in;
   &:hover {
-    background-color: var(--cb);
     color: var(--cy);
+    background-color: var(--cb);
+    border-color: var(--cb);
   }
   &.alt {
-    background-color: transparent;
-    color: var(--cy);
-    border-color: var(--cy);
-    padding: 0.8125rem 1.9375rem;
-    border-radius: 0.75rem;
     font-size: 0.9375rem;
-    line-height: 1.33333;
-    &:hover {
-      background-color: var(--cb);
-      border-color: transparent;
-    }
+    line-height: 1.53;
+    padding: 0.7813rem 1.9375rem;
+    border-radius: 0.75rem;
+  }
+  &.wide {
+    padding: 1.4375rem 3.9375rem;
   }
   &.trnspr {
+    color: var(--cb);
     background-color: transparent;
     border-color: var(--cb);
     &:hover {
-      background-color: var(--cb);
+      color: var(--cw);
     }
   }
-  &.cl-bl {
-    background-color: var(--cb);
-    color: var(--cw);
+  &.bg-yell {
+    background-color: var(--cy);
+    border-color: var(--cy);
+    color: var(--cb);
     &:hover {
-      color: var(--cy);
+      color: var(--cw);
+      border-color: var(--cb);
+      border-color: var(--cb);
     }
-  }
-  &.wide {
-    padding: 1.4375rem 4rem;
   }
 }
 
@@ -133,14 +132,13 @@
     padding: 0.8125rem 1.9375rem;
 
     &.alt {
-      padding: 0.75rem 1.875rem;
+      border-radius: 0.5rem;
       padding: 0.8125rem 1.9375rem;
-      font-size: 0.875rem;
-      line-height: 1.35714;
+      line-height: 1.33;
     }
 
     &.wide {
-      padding: 0.8438rem 2rem;
+      padding: 0.8438rem 1.9375rem;
     }
   }
 

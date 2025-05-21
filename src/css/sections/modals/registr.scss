@@ -10,11 +10,8 @@
   }
   &__btns {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 1.5625rem;
-    .btn-def {
-      flex: 1 1 auto;
-    }
   }
 }
 
@@ -34,7 +31,6 @@
 
     &__btns {
       flex-direction: column;
-      justify-content: stretch;
       gap: 1rem;
       .btn-def {
         width: 100%;

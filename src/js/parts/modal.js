@@ -1,9 +1,7 @@
 import scrollLock from 'scroll-lock';
 
-import { pauseVideo } from './videoplay';
 import { closeMenu } from './mobmenu';
 import { addDataAmbass } from './ambass';
-import { addDataCeo } from './ceo';
 
 const activeModals = new Set();
 export const initializedModals = new WeakSet();
@@ -58,10 +56,8 @@ export function openModal(modalId, event, name, title, success, pay) {
     }
 
     if (!modal.classList.contains('isOpened')) {
-      pauseVideo();
       closeMenu();
       addDataAmbass(modal, event);
-      addDataCeo(modal, event);
       showModal(modal);
       document.getElementById('formname').value = name;
       document.getElementById('formtitle').innerHTML = title;
