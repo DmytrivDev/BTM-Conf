@@ -5,7 +5,7 @@ export function addDataAmbass(modal, event) {
 
   const ambassData = {
     ava: ambass.querySelector('.ambass__img img, .commit__img img')?.src || '',
-    name: ambass.querySelector('.tl3')?.textContent || '',
+    name: ambass.querySelector('.tl4')?.textContent || '',
     activity:
       ambass.querySelector('.ambass__activity p, .commit__activity p')
         ?.textContent || '',
@@ -22,5 +22,7 @@ export function addDataAmbass(modal, event) {
     ambassData.activity;
   modal.querySelector('.txt-def p').textContent = ambassData.desc;
   modal.querySelector('.evidence__soc').innerHTML = ambassData.soc;
-  modal.querySelector('.evidence__connect').href = ambassData.connect;
+  modal
+    .querySelector('.evidence__connect')
+    ?.setAttribute('href', ambassData.connect);
 }

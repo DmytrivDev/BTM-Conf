@@ -164,9 +164,12 @@
       padding: 0.8125rem 1.9375rem;
       line-height: 1.33;
     }
-
     &.wide {
       padding: 0.8438rem 1.9375rem;
+    }
+    &.mob-wide {
+      width: 100%;
+      max-width: 20rem;
     }
   }
 
