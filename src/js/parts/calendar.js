@@ -1,11 +1,11 @@
 document.querySelectorAll('.addCalendar').forEach(button => {
   button.addEventListener('click', function () {
-    const item = this.closest('.summit__item');
+    const item = this.closest('.calendar');
 
     const timeText = item.dataset.time;
-    const title = item.dataset.title || 'Подія без назви';
-    const description = item.dataset.speakers || 'Спікери не вказані';
-    const location = item.dataset.location || 'Локація не вказана';
+    const title = item.dataset.title || '';
+    const description = item.dataset.speakers || '';
+    const location = item.dataset.location || '';
 
     const today = new Date().toISOString().split('T')[0];
     const [startTime, endTime] = timeText.split(' - ').map(time => time.trim());

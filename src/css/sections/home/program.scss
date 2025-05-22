@@ -1,12 +1,14 @@
-.summit {
-  padding-top: 10.1875rem;
+.program {
+  position: relative;
+  z-index: 20;
+  padding-top: 9.1875rem;
 
   &__body {
     position: relative;
     z-index: 5;
-    padding: 6.25rem 7.5rem;
+    padding: 7.5rem;
     border-radius: 4.375rem;
-    background-color: var(--cw2);
+    background-color: var(--cw);
   }
 
   &__content {
@@ -104,7 +106,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .summit {
+  .program {
     padding-top: 4.875rem;
 
     &__container {
@@ -144,10 +146,10 @@
         padding: 0.8438rem 1.25rem;
       }
 
-      .summit__time {
+      .program__time {
         grid-area: 1 / 1 / 2 / 2;
       }
-      .summit__info {
+      .program__info {
         grid-area: 2 / 1 / 3 / 3;
       }
       & > .btn-def {
@@ -195,7 +197,7 @@
 }
 
 @media screen and (max-width: 475px) {
-  .summit {
+  .program {
     &__item {
       align-items: stretch;
       grid-template-columns: 1fr;
@@ -206,8 +208,8 @@
         max-width: 18.125rem;
       }
 
-      .summit__time,
-      .summit__info,
+      .program__time,
+      .program__info,
       & > .btn-def {
         grid-area: auto;
       }
