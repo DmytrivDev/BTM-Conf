@@ -1,5 +1,5 @@
 function addMoreBlocks(container) {
-  const moreBlock = container?.querySelector('.moreBlock');
+  const moreBlock = container?.querySelector('.more-block');
   const btnMore = container?.querySelector('.addMore');
 
   btnMore?.addEventListener('click', () => {

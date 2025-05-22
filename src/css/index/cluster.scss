@@ -99,6 +99,20 @@
   }
 }
 
+.more-block {
+  &.isAnim {
+    & > li {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.isOpened {
+    & > li {
+      display: flex;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .arrows {
     width: 100%;

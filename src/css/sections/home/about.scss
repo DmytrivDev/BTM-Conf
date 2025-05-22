@@ -1,4 +1,6 @@
 .about {
+  position: relative;
+  z-index: 20;
   padding-top: 8.3125rem;
 
   &__body {

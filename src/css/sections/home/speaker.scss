@@ -1,48 +1,22 @@
 .speaker {
-  padding-top: 6.25rem;
+  padding-top: 8.375rem;
 
   &__wrapp {
     position: relative;
-    padding: 0 7.5rem;
-    margin-bottom: 6.25rem;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 15.25rem;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 9rem);
-      background-color: var(--co);
-      border-radius: 4.375rem;
-    }
   }
   &__body {
     position: relative;
-    z-index: 2;
+    z-index: 10;
   }
   &__heading {
     margin-bottom: 2.875rem;
   }
 
-  &__fltr1 {
+  &__circle {
     position: absolute;
-    z-index: -2;
-    top: 14rem;
-    left: 5.39rem;
-    width: 73.3425rem;
-    transform: rotate(63deg);
-    filter: blur(7.3125rem);
-    img {
-      width: 100%;
-    }
-  }
-  &__fltr2 {
-    position: absolute;
-    z-index: -1;
-    bottom: -27.25rem;
-    left: -48.75rem;
+    z-index: 1;
+    bottom: -24.6875rem;
+    left: -51.75rem;
     width: 80.5625rem;
     img {
       width: 100%;
@@ -50,45 +24,57 @@
   }
 
   .commit__item {
-    color: var(--cm);
-  }
-  .commit__pagin {
-    .addMore {
-      color: var(--cm);
-      border-color: var(--cm);
-
-      &:hover {
-        color: var(--cy);
-        border-color: transparent;
-      }
+    max-width: calc((100% - 3 * 1.875rem) / 4);
+    &:nth-child(-n + 8) {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
     }
+  }
+  .commit__link {
+    color: var(--cy);
+  }
+
+  .addMore {
+    margin: 3.9375rem auto 0 auto;
   }
 }
 
 @media screen and (max-width: 960px) {
   .speaker {
-    padding-top: 4.375rem;
+    padding-top: 3.25rem;
 
-    &__wrapp {
-      padding: 0;
-      margin-bottom: 1.4375rem;
-      &::before,
-      &::after {
-        content: "";
-        top: 4.4375rem;
-        left: -0.9375rem;
-        height: calc(100% - 3rem);
-        width: calc(100% + 1.875rem);
-        border-radius: 0.9375rem;
+    &__heading {
+      margin-bottom: 2.5rem;
+    }
+
+    &__circle {
+      z-index: -1;
+      bottom: -12.9375rem;
+      left: -12.0625rem;
+      width: 26.0747rem;
+    }
+
+    .commit__item {
+      max-width: calc((100% - 1 * 1.875rem) / 2);
+      &:nth-child(-n + 8) {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:nth-child(-n + 4) {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
     }
-    &__heading {
-      margin-bottom: 4rem;
-    }
+  }
+}
 
-    &__fltr1,
-    &__fltr2 {
-      display: none;
+@media screen and (max-width: 475px) {
+  .speaker {
+    .commit__item {
+      max-width: 100%;
     }
   }
 }

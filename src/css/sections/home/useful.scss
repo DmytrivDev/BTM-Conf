@@ -1,4 +1,6 @@
 .useful {
+  position: relative;
+  z-index: 15;
   &__wrapp {
     position: relative;
   }

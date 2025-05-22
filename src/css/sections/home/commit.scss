@@ -1,10 +1,20 @@
 .commit {
   position: relative;
   z-index: 10;
-  padding: 8rem 0;
-  border-radius: 4.375rem;
-  background-color: var(--cw);
-  box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
+
+  &__boxes {
+    border-radius: 4.375rem;
+    background-color: var(--cw);
+    box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
+  }
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    position: relative;
+    z-index: 10;
+    padding: 8rem 0;
+  }
 
   &__heading {
     margin-bottom: 3.5625rem;
@@ -20,18 +30,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem 1.875rem;
-
-    &.isAnim {
-      .commit__item {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-    &.isOpened {
-      .commit__item {
-        display: flex;
-      }
-    }
   }
 
   &__item {
@@ -52,6 +50,7 @@
     }
   }
   &__box {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 1.0625rem 0;
@@ -93,6 +92,19 @@
     margin: 3.9375rem auto 0 auto;
   }
 
+  &__corner {
+    position: absolute;
+    z-index: -1;
+    top: 2.3563rem;
+    left: -5.375rem;
+    transform: rotate(150deg);
+    width: 73.3425rem;
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+
   &__desc,
   &__soc {
     display: none;
@@ -101,10 +113,13 @@
 
 @media screen and (max-width: 960px) {
   .commit {
-    border-radius: 0.9375rem;
-    padding: 1.25rem 0 1.875rem 0;
-    box-shadow: none;
-
+    &__boxes {
+      border-radius: 0.9375rem;
+      box-shadow: none;
+    }
+    &__body {
+      padding: 1.25rem 0 1.875rem 0;
+    }
     &__heading {
       br {
         display: none;
@@ -147,6 +162,10 @@
 
     .addMore {
       margin: 2.5rem auto 0 auto;
+    }
+
+    &__corner {
+      display: none;
     }
   }
 }
