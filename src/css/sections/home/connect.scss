@@ -17,7 +17,6 @@
     z-index: 10;
     padding: 7.8125rem 7.5rem;
     border-radius: 4.375rem;
-    border: 0.0625rem solid var(--cw2);
     background-color: rgba(0, 200, 163, 0.1);
     box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
     &::before {
@@ -30,6 +29,7 @@
       height: 100%;
       backdrop-filter: blur(0.9375rem);
       border-radius: 4.375rem;
+      border: 0.0625rem solid var(--cw2);
     }
   }
 

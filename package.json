@@ -1,5 +1,5 @@
 {
-  "name": "BTM",
+  "name": "BTM-Conf",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -16,11 +16,8 @@
   "author": "Vladyslav Halchenko",
   "license": "ISC",
   "dependencies": {
-    "@splidejs/splide": "^4.1.4",
-    "accordion-js": "^3.4.1",
     "axios": "^1.9.0",
     "imask": "^7.6.1",
-    "nice-select2": "^2.3.1",
     "scroll-lock": "^2.1.5",
     "scroll-to-element": "^2.0.3",
     "validator": "^13.15.0",

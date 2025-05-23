@@ -5,7 +5,6 @@
 @import url('./settings/default.scss');
 
 @import url('./settings/general.scss');
-@import url('./index/embeded.scss');
 @import url('./index/elements.scss');
 @import url('./index/cluster.scss');
 
@@ -28,6 +27,7 @@
 @import url('./sections/home/program.scss');
 @import url('./sections/home/tickets.scss');
 @import url('./sections/home/gallery.scss');
+@import url('./sections/home/sponsors.scss');
 @import url('./sections/home/connect.scss');
 
 /* Modal */
@@ -40,9 +40,6 @@
 
 /* Success */
 @import url('./sections/success/success.scss');
-
-/* Policy */
-@import url('./sections/policy/policy.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
