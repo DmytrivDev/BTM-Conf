@@ -38,8 +38,5 @@
 /* Thank */
 @import url('./sections/thank/thank.scss');
 
-/* Success */
-@import url('./sections/success/success.scss');
-
 /* Footer */
 @import url('./sections/footer/footer.scss');
