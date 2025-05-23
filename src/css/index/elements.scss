@@ -6,7 +6,6 @@
 }
 .top-radius {
   border-radius: 4.375rem 4.375rem 0 0;
-  padding-top: 8rem;
 }
 .bottom-radius {
   border-radius: 0 0 4.375rem 4.375rem;
@@ -135,6 +134,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  .top-radius {
+    border-radius: 0.9375rem 0.9375rem 0 0;
+  }
   .bottom-radius {
     border-radius: 0 0 0.9375rem 0.9375rem;
     padding-bottom: 1.875rem;
