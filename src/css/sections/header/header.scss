@@ -35,8 +35,6 @@ body {
       flex-shrink: 0;
       img {
         width: 100%;
-        filter: brightness(0) saturate(100%) invert(9%) sepia(27%) saturate(0%)
-          hue-rotate(254deg) brightness(95%) contrast(89%);
       }
     }
   }

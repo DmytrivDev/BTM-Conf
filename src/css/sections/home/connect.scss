@@ -60,6 +60,8 @@
       width: 5.5781rem;
       img {
         width: 100%;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+          hue-rotate(310deg) brightness(102%) contrast(105%);
       }
     }
   }
