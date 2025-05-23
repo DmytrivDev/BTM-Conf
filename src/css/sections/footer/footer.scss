@@ -1,3 +1,53 @@
+body {
+  &.footer-trnspr {
+    .footer {
+      background-color: transparent;
+      * {
+        color: var(--cm) !important;
+      }
+
+      &__head {
+        .custom-logo-link {
+          img {
+            filter: brightness(0) saturate(100%) invert(9%) sepia(27%)
+              saturate(0%) hue-rotate(254deg) brightness(95%) contrast(89%);
+          }
+        }
+      }
+      &__box {
+        a {
+          span {
+            img {
+              filter: brightness(0) saturate(100%) invert(53%) sepia(74%)
+                saturate(1408%) hue-rotate(128deg) brightness(96%)
+                contrast(101%);
+            }
+          }
+        }
+      }
+      &__soc {
+        a {
+          background-color: var(--cl);
+        }
+      }
+
+      &__bottom {
+        border-color: rgba(34, 34, 34, 0.3);
+
+        & > a {
+          span {
+            img {
+              filter: brightness(0) saturate(100%) invert(53%) sepia(74%)
+                saturate(1408%) hue-rotate(128deg) brightness(96%)
+                contrast(101%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
   padding-top: 5.3125rem;
   background-color: var(--cl);

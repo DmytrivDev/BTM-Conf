@@ -126,13 +126,6 @@
   }
 }
 
-.tabs__cont {
-  display: none;
-  &.isActive {
-    display: block;
-  }
-}
-
 @media screen and (max-width: 960px) {
   .top-radius {
     border-radius: 0.9375rem 0.9375rem 0 0;
