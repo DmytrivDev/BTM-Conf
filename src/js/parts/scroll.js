@@ -1,15 +1,13 @@
 import scrollToElement from 'scroll-to-element';
 
-const anchorLinks = document.querySelectorAll(
-  'a[href^="#"]'
-);
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
 anchorLinks?.forEach(link => {
   link.addEventListener('click', event => {
     const headerHeight = document.querySelector('.header').offsetHeight;
     const href = link.getAttribute('href');
 
-    if (href.startsWith('#')) {
+    if (href.startsWith('#') && href !== '#') {
       event.preventDefault();
 
       const targetElement = document.querySelector(href);
