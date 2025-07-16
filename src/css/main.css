@@ -20,6 +20,7 @@
 /* Home */
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/about.scss');
+@import url('./sections/home/conf.scss');
 @import url('./sections/home/useful.scss');
 @import url('./sections/home/commit.scss');
 @import url('./sections/home/speaker.scss');

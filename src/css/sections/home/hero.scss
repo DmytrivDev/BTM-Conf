@@ -2,20 +2,26 @@
   &__body {
     padding: 1.8125rem 0 0.9375rem 0;
   }
+  &__sub,
   &__subtl {
     font-family: var(--ff2);
     font-size: 2rem;
+    font-weight: 400;
     line-height: 1.21;
-    margin-bottom: 0.9375rem;
+  }
+  &__subtl {
+    line-height: 0.78;
+    margin-top: 1.25rem;
   }
   &__tl {
     font-family: var(--ff2);
     font-size: 6.25rem;
     line-height: 0.79;
     font-weight: 400;
-    margin-bottom: 1.5625rem;
+    margin-top: 0.9375rem;
   }
   &__content {
+    margin-top: 2.8125rem;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -58,8 +64,8 @@
       margin-bottom: 0.375rem;
     }
     h2 {
-      font-family: var(--ff3);
-      font-weight: 600;
+      font-family: var(--ff2);
+      font-weight: 400;
       font-size: 2rem;
       line-height: 0.78125;
     }
@@ -113,18 +119,23 @@
     &__body {
       padding: 1.5rem 0 2.8125rem 0;
     }
-    &__subtl {
+    &__sub {
       font-size: 1rem;
       line-height: 0.93;
-      margin-bottom: 1rem;
+    }
+    &__subtl {
+      font-size: 1.25rem;
+      line-height: 0.75;
+      margin-top: 1.25rem;
     }
     &__tl {
       font-size: 2.6875rem;
       line-height: 0.86;
-      margin-bottom: 1.5625rem;
+      margin-top: 1.5rem;
     }
 
     &__content {
+      margin-top: 1.25rem;
       align-items: start;
       gap: 1.25rem;
       padding: 1.25rem;
