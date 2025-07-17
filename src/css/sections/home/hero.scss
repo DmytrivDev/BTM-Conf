@@ -136,8 +136,7 @@
 
     &__content {
       margin-top: 1.25rem;
-      align-items: start;
-      gap: 1.25rem;
+      gap: 1.25rem 2rem;
       padding: 1.25rem;
     }
     &__info {
@@ -163,15 +162,6 @@
 
     &__partners {
       display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 765px) {
-  .hero {
-    &__content {
-      flex-direction: column;
-      justify-content: stretch;
     }
   }
 }

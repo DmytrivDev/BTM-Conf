@@ -6,7 +6,16 @@
   &__heading {
     position: relative;
     z-index: 10;
-    margin-bottom: -2.6875rem;
+    padding-left: 2.375rem;
+    margin-bottom: -4.75rem;
+  }
+  &__tl {
+    color: var(--cg);
+    font-family: var(--ff2);
+    font-size: 18.5625rem;
+    font-weight: 400;
+    line-height: 0.87;
+    word-break: break-work;
   }
 
   &__wrapp {
@@ -15,10 +24,12 @@
   &__body {
     position: relative;
     z-index: 10;
-    padding: 7.8125rem 7.5rem;
-    border-radius: 4.375rem;
+    padding: 4rem 7.5rem;
+    border-radius: 70px;
     background-color: rgba(0, 200, 163, 0.1);
     box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
+    min-height: 31.25rem;
+
     &::before {
       content: "";
       position: absolute;
@@ -38,18 +49,23 @@
     z-index: 5;
     .tl3 {
       line-height: 1.08696;
-      margin-bottom: 1.625rem;
     }
   }
+  &__txt {
+    margin-top: 3.125rem;
+    color: var(--cw);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.29;
+  }
   &__address {
+    margin-top: 3.125rem;
     display: flex;
     align-items: start;
     flex-wrap: wrap;
-    gap: 3.125rem;
-    & > div {
-      flex: 0 0 auto;
-    }
+    gap: 0.75rem 3.125rem;
   }
+
   &__logo {
     & > p {
       color: var(--cw);
@@ -65,6 +81,7 @@
       }
     }
   }
+
   &__box {
     & > p {
       color: var(--cw);
@@ -77,14 +94,14 @@
 
       width: fit-content;
       word-break: break-word;
-      font-size: 2rem;
-      line-height: 1.28125;
+      font-size: 1.5rem;
+      line-height: 1.29;
       color: var(--cw);
       transition: all 0.15s ease-in;
 
       & > span {
         position: relative;
-        top: 0.5rem;
+        top: 0.125rem;
         flex-shrink: 0;
         width: 1.5625rem;
         img {
@@ -173,12 +190,18 @@
     }
 
     &__heading {
-      margin-bottom: -1.375rem;
+      padding-left: 0.9375rem;
+      margin-bottom: -1rem;
+    }
+    &__tl {
+      font-size: 3.75rem;
+      line-height: normal;
     }
 
     &__body {
-      padding: 1.0625rem 0.9375rem 2.6875rem 0.9375rem;
+      padding: 2rem 0.9375rem 1.25rem 0.9375rem;
       border-radius: 0.9375rem;
+      min-height: auto;
 
       &::before {
         border-radius: 0.9375rem;
@@ -188,9 +211,17 @@
     &__content {
       .tl3 {
         line-height: 1.10714;
-        margin-bottom: 0.75rem;
       }
     }
+    &__txt {
+      margin-top: 1.5625rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    &__address {
+      margin-top: 1.5625rem;
+    }
+
     &__logo {
       & > p {
         font-size: 0.875rem;
@@ -200,6 +231,7 @@
         width: 4.875rem;
       }
     }
+
     &__box {
       & > p {
         font-size: 0.875rem;
@@ -210,7 +242,7 @@
         line-height: 1.44444;
 
         & > span {
-          top: 0.25rem;
+          top: 0.1875rem;
           width: 1.125rem;
         }
         &:hover {
@@ -262,17 +294,6 @@
           filter: blur(4.3746rem);
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: 675px) {
-  .connect {
-    &__address {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: stretch;
-      gap: 0.75rem;
     }
   }
 }
