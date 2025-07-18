@@ -1,0 +1,55 @@
+.conf {
+  position: relative;
+  z-index: 16;
+}
+
+.conf__body {
+  padding: 8.75rem 7.5rem;
+  .tl2 {
+  }
+}
+
+.conf__list {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+
+  li {
+    p {
+      padding-top: 0.4375rem;
+      color: var(--cw);
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .conf__container {
+    padding: 0;
+  }
+
+  .conf__body {
+    br {
+      display: none;
+    }
+
+    padding: 2rem 0.9375rem 1.375rem 0.9375rem;
+  }
+
+  .conf__list {
+    margin-top: 1.5625rem;
+    gap: 0.625rem;
+
+    li {
+      flex: 1 1 calc((100% - 2 * 0.625rem) / 3);
+      min-width: 8.75rem;
+      p {
+        padding-top: 0;
+        font-size: 0.875rem;
+        line-height: 1.35;
+      }
+    }
+  }
+}

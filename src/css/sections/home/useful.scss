@@ -1,22 +1,38 @@
 .useful {
   position: relative;
   z-index: 15;
+
   &__wrapp {
     position: relative;
   }
   &__body {
-    padding: 9.375rem 0;
+    position: relative;
+    z-index: 15;
+    padding: 8.75rem 0;
   }
 
-  &__heading {
-    margin-bottom: 5.1875rem;
-  }
   &__tl {
-    font-family: var(--ff3);
-    font-size: 6.875rem;
-    font-weight: 600;
-    line-height: 0.9;
+    font-family: var(--ff2);
+    font-weight: 400;
+    font-size: 5.625rem;
+    line-height: 0.87778;
+    max-width: 44.5rem;
   }
+  &__subtl {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.29;
+    max-width: 44.5rem;
+  }
+  &__txt {
+    margin-top: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 32.375rem;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -45,25 +61,56 @@
     }
   }
 
-  &__corner {
+  &__corner1,
+  &__corner2,
+  &__corner3 {
     position: absolute;
     z-index: -1;
-    top: -18.14rem;
-    left: -11.3125rem;
-    transform: rotate(30deg);
-    width: 73.3425rem;
+    width: 73.3125rem;
     filter: blur(7.3125rem);
     img {
       width: 100%;
     }
   }
-
-  &__circle {
+  &__circle1,
+  &__circle2 {
     position: absolute;
     z-index: -2;
-    top: -10.6875rem;
-    left: 0.1875rem;
     width: 28.1875rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__corner1,
+  &__circle1 {
+    display: none;
+  }
+
+  &__corner2 {
+    z-index: -2;
+    bottom: -22.5625rem;
+    right: -13.875rem;
+    transform: rotate(-150deg);
+  }
+  &__circle2 {
+    z-index: -3;
+    bottom: -11.6875rem;
+    right: 2.375rem;
+  }
+  &__corner3 {
+    z-index: -1;
+    bottom: -65.9375rem;
+    right: 7rem;
+    transform: rotate(150deg);
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -4;
+    bottom: -4.875rem;
+    right: 0;
+    width: 40.25rem;
     img {
       width: 100%;
     }
@@ -72,21 +119,31 @@
 
 @media screen and (max-width: 960px) {
   .useful {
-    br {
-      display: none;
-    }
     &__body {
+      br {
+        display: none;
+      }
+
       padding: 3.5rem 0;
     }
 
-    &__heading {
-      margin-bottom: 1.875rem;
-    }
     &__tl {
-      font-family: var(--ff3);
       font-size: 2.8125rem;
       line-height: 1.11;
     }
+    &__subtl {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      max-width: 100%;
+    }
+    &__txt {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      max-width: 100%;
+    }
+
     &__list {
       gap: 1.25rem;
       li {
@@ -104,17 +161,44 @@
       }
     }
 
-    &__corner {
+    &__corner1 {
+      display: block;
       top: -4.1875rem;
       left: -1.625rem;
-      width: 14.6412rem;
+      transform: rotate(30deg);
       filter: blur(2.0209rem);
+      width: 14.6412rem;
     }
-
-    &__circle {
+    &__circle1 {
+      display: block;
       top: -2.6875rem;
       left: -0.2813rem;
       width: 5.6375rem;
+    }
+
+    &__corner2 {
+      right: -5.6781rem;
+      bottom: -10.375rem;
+      width: 29.375rem;
+      height: 29.375rem;
+      transform: rotate(-160deg);
+      filter: blur(2.9332rem);
+    }
+    &__circle2 {
+      right: -1.0625rem;
+      bottom: -6rem;
+      width: 11.25rem;
+      height: 11.25rem;
+    }
+
+    &__corner3 {
+      display: none;
+    }
+
+    &__img {
+      bottom: -3.25rem;
+      right: -0.1069rem;
+      width: 16.125rem;
     }
   }
 }
