@@ -59,6 +59,16 @@ export function openModal(modalId, event, name, title, success, pay) {
       closeMenu();
       addDataAmbass(modal, event);
       showModal(modal);
+      document.getElementById('formname').value = name;
+      document.getElementById('formtitle').innerHTML = title;
+      modal.querySelector('form').dataset.success = success;
+
+      if (pay) {
+        modal.querySelector('form').dataset.payment = pay;
+        modal.querySelector('#payNow').classList.remove('hideBtn');
+      } else {
+        modal.querySelector('#payNow').classList.showe('hideBtn');
+      }
     }
   }
 }
@@ -68,8 +78,12 @@ function initOpenModal() {
   btnsOpenModal.forEach(btn => {
     btn.addEventListener('click', event => {
       const modalId = btn.dataset.id;
+      const modaName = btn.dataset.name;
+      const modaTtl = btn.dataset.title;
+      const success = btn.dataset.success;
+      const pay = btn.dataset.pay;
       if (modalId) {
-        openModal(modalId, event);
+        openModal(modalId, event, modaName, modaTtl, success, pay);
       }
     });
   });
